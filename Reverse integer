@@ -1,0 +1,24 @@
+// Wap to print reverse integer.
+
+# include <iostream>
+using namespace std;
+
+int main()
+{
+    cout<<"Enter number: ";
+    int num;
+    cin>>num;
+    
+    int rem , ans;
+    
+    while(num!= 0)
+    {
+        rem = num%10;
+        num = num/10;
+        ans = ans*10 + rem;
+    }
+    cout<<ans;
+    
+    
+    return 0;
+}
