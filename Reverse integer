@@ -1,6 +1,8 @@
 // Wap to print reverse integer.
+// use INT_MAx and INT_MIN to avoid Intrger overflow condition.
 
 # include <iostream>
+#include <limits.h>
 using namespace std;
 
 int main()
@@ -15,8 +17,14 @@ int main()
     {
         rem = num%10;
         num = num/10;
+        if(ans>INT_MAX/10 || ans<INT_MIN/10)
+        {
+            return 0;
+        }
         ans = ans*10 + rem;
     }
+    
+    
     cout<<ans;
     
     
