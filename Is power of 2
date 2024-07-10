@@ -1,0 +1,26 @@
+// Wap to check Given number is a power of 2 or not.
+
+# include <iostream>
+using namespace std;
+
+int main()
+{
+    cout<<"Enter number: ";
+    int n;
+    cin>>n;
+    int num = n;
+    
+    while(num != 1)
+    {
+        if(num%2 != 0)
+        {
+            return 0;
+        }
+        num = num/2;
+        
+    }
+    cout<<n<<" comes in a power of 2.";
+    
+    
+    return 0;
+}
