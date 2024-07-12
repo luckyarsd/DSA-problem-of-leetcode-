@@ -1,0 +1,21 @@
+// Wap to convert samll alphabet to Capital.
+// Use concept of ASCII value of alphabet.
+
+# include <iostream>
+using namespace std;
+
+char convert(char name)
+{
+    char ans = name;
+    ans = ans -'a' + 'A';
+    return ans;
+}
+
+int main()
+{
+    char name;
+    cout<<"Enter a small alphabet to convert Capital aplhabet: ";
+    cin>>name;
+    cout<<convert(name);
+    return 0;
+}
