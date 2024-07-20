@@ -1,0 +1,20 @@
+// WAP to search a gien number in an array.
+
+# include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[5] = {1,4,8,40,86};
+    cout<<"Enter Number to search: ";
+    int num,index=-1;
+    cin>>num;
+    for(int i=0 ; i<5; i++)
+    {
+        if(arr[i]==num)
+            index = i;
+    }
+    cout<<index<<endl;
+    
+    return 0;
+}
