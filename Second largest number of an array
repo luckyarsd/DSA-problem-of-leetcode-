@@ -1,0 +1,29 @@
+// WAP to find second largest number in given array.
+
+# include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[5] = {1,4,5,7,8};
+    int n = sizeof(arr)/4;
+    
+    // First largest
+    int fl = -1;
+    for(int i=0 ; i<n ; i++)
+    {
+        fl = max(fl,arr[i]);
+    }
+        
+    // second largest
+    int sl = -1;
+    for(int i = 0 ; i<n ; i++)
+    {
+        if(arr[i]!=fl)
+            sl = max(sl , arr[i]);
+    }
+    
+    cout<<"Second largest number in this array is = "<<sl; 
+    
+    return 0;
+}
