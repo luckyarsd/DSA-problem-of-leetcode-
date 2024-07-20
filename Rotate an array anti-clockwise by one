@@ -1,0 +1,26 @@
+// WAP to rotate anti-clockwise an array by one.
+
+# include <iostream>
+using namespace std;
+
+int main()
+{
+    int arr[5] = {1,4,5,7,8};
+    int n = sizeof(arr)/4;
+    int temp = arr[0];
+    for(int i=0 ; i<n ; i++)
+    {
+        arr[i] = arr[i+1];
+    }
+    arr[n-1] = temp;
+    
+    
+    // Printing array.
+    for(int i=0 ; i<n ; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    
+    
+    return 0;
+}
