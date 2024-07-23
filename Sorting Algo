@@ -1,0 +1,125 @@
+// sorting Algo sample.
+
+# include <iostream>
+using namespace std;
+
+void insertionsort_Ascending(int arr[], int n)
+{
+    for (int i=0 ; i<n ; i++)
+    {
+        for(int j=i ; j>0 ; j--)
+        {
+            if(arr[j]<arr[j-1])
+                swap(arr[j],arr[j-1]);
+            else
+                break;
+        }
+    }
+    
+    cout<<"Sorted array using insertion sort ( Ascending )= [";
+    for(int i=0 ; i<n ; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<"]"<<endl;
+    
+}
+
+
+void insertionsort_descending(int arr[] , int n)
+{
+    for(int i=0 ; i<n ; i++)
+    {
+        for(int j=i ; j>0 ; j--)
+        {
+            if(arr[j]>arr[j-1])
+                swap(arr[j],arr[j-1]);
+            else
+                break;
+        }
+    }
+    
+    cout<<"Sorted array using insertion sort ( Descending )= [";
+    for(int i=0 ; i<n ; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<"]"<<endl;
+    
+}
+
+void bubblesort_Ascending(int arr[] , int n)
+{
+    for(int i=0 ; i<n ; i++)
+    {
+        for(int j=0 ; j<n ; j++)
+        {
+            if(arr[j+1]<arr[j])
+                swap(arr[j+1] ,arr[j]);
+            else
+                break;
+        }
+    }
+    
+    
+    cout<<"Sorted array using bubble sort ( Ascending )= [";
+    for(int i=0 ; i<n ; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<"]"<<endl;
+    
+}
+
+
+void bubblesort_Descending(int arr[] , int n)
+{
+    for(int i=0 ; i<n ; i++)
+    {
+        for(int j=0 ; j<n ; j++)
+        {
+            if(arr[j+1]>arr[j])
+                swap(arr[j+1] ,arr[j]);
+            else
+                break;
+        }
+    }
+    
+    
+    cout<<"Sorted array using bubble sort ( Descending )= [";
+    for(int i=0 ; i<n ; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<"]"<<endl;
+    
+}
+
+
+int main()
+{
+    int n;
+    cout<<"Enter size of array: ";
+    cin>>n;
+    int arr[100];
+    for(int i=0 ; i<n ; i++)
+    {
+        cout<<"Enter "<<i<<" element: ";
+        cin>>arr[i];
+    }
+    
+    cout<<"Array = [";
+    for(int i=0 ; i<n ; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    cout<<"]"<<endl;
+    
+    insertionsort_Ascending(arr,n);
+    bubblesort_Ascending(arr,n);
+    insertionsort_descending(arr,n);
+    bubblesort_Descending(arr,n);
+    
+    
+    return 0;
+}
