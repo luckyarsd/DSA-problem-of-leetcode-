@@ -1,0 +1,70 @@
+// WAP a sample code BST.
+
+# include <iostream>
+using namespace std;
+int main()
+{
+    //Array input
+    int arr[1000] = {};
+    cout<<"Enter number of element in array: ";
+    int n;
+    cin>>n;
+    for(int i=0 ; i<n ; i++)
+    {
+        cout<<"Enter "<<i<<" element: ";
+        cin>>arr[i];
+    }
+    
+    //Array sorting
+    for(int i=0; i<n ; i++)
+    {
+        for(int j=i ; j>0 ; j--)
+        {
+            if(arr[j]<arr[j-1])
+            {
+                swap(arr[j] ,arr[j-1]);
+            }
+            else
+            {
+                break;
+            }
+        }
+    }
+    
+    // sorted Array
+    for(int i=0 ; i<n ; i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    
+    // Target
+    cout<<endl;
+    int target;
+    cout<<"Enter a target to search: ";
+    cin>>target;
+    
+    int f=0 , l=4 , mid = 0 , index = -1;
+    
+    //BST loop
+    while(f<=l)
+    {
+        mid = (f+l)/2;
+        
+        if(arr[mid]==target)
+        {
+            index = mid;
+            break;
+        }
+        else if(arr[mid]<target)
+        {
+            f = mid+1;
+        }
+        else
+        {
+            l = mid-1;
+        }
+    }
+    cout<<index;
+    return 0;
+}
+
