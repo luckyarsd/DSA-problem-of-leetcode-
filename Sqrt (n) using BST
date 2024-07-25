@@ -1,0 +1,44 @@
+// WAP to Find sqrt(n) use concept of BST so that Time complexity will O(log n) .
+
+# include <iostream>
+using namespace std;
+
+int sqrt(int n)
+{
+    
+    int start=0 , end = n , mid , ans;
+    while(start<=end)
+    {
+        mid = (start+end)/2;
+        if(mid*mid == n)
+        {
+            return mid;
+            break;
+        }
+        else if(mid*mid<n)
+        {
+            ans = mid;
+            start = mid+1;
+        }
+        else
+        {
+            end = mid-1;
+        }
+    }
+    return ans;
+}
+
+
+
+
+int main()
+{
+    int n;
+    cout<<"Enter a number to fins it's sqrt: ";
+    cin>>n;
+    cout<<sqrt(n);
+    
+    return 0;
+}
+
+
