@@ -39,7 +39,7 @@ void binary_search (int arr[] , int n)
             cout<<"Got it at index = ";
             break;
         }
-        else if(mid<target)
+        else if(arr[mid]<target)
         {
             start = mid+1;
         }
