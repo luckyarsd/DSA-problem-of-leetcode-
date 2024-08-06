@@ -1,4 +1,4 @@
-// WAP for a first and last occurance of  number using binary search.
+// WAP to find first and last occurance of  number using binary search.
 # include <iostream>
 #include <vector>
 using namespace std;
