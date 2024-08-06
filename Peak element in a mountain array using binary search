@@ -1,0 +1,39 @@
+// WAP to find Peak element in a array using binary search.
+# include <iostream>
+#include <vector>
+using namespace std;
+
+int  main()
+{
+    int arr[5] = {2,7,9,6,3};
+    int size = sizeof(arr)/4;
+    cout<<"Size of array : "<<size<<endl;
+    
+    int left = 0 , right = size - 1;
+    int target = 8;
+    
+    // Peak number
+    int index = -1;
+    while(left<=right)
+    {
+        int mid = (left+right)/2;
+        if(arr[mid]>arr[mid-1] and arr[mid]>arr[mid+1])
+        {
+            index = mid;
+            break;
+        }
+        else if(arr[mid]<arr[mid+1])
+        {
+            // Move right
+            left = mid + 1;
+        }
+        else
+        {
+            // Move left
+            right = mid - 1;
+        }
+    }
+    
+    cout<<"Pek element present at index = "<<index;
+    return 0;
+}
