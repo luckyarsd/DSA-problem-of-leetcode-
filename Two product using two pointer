@@ -1,0 +1,37 @@
+// Two product problem using two pointer
+
+# include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    vector <int> v = {10, 20, 9, 40};
+    sort(v.begin() , v.end());
+    int n = v.size();
+    int start = 0 , end = n-1 ;
+    bool ans;
+    int target =  401;
+    
+    while(start<end)
+    {
+        int product = v[start]*v[end];
+        if(product==target)
+        {
+            ans = true;
+            break;
+        }
+        else if (product<target)
+        {
+            start++;
+        }
+        else
+        {
+            end--;
+        }
+    }
+    
+    cout<<ans;
+   
+   
+    return 0;
+
+}
