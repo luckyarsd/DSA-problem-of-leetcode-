@@ -1,0 +1,18 @@
+// WAP to print all possible subarray of an array.
+// subarray =  It is a contiguos part of an aary with n number of elements.
+
+# include <iostream>
+using namespace std;
+int main()
+{
+    int arr[5] = {1,2,4,5,7};
+    int n = sizeof(arr)/4;
+    
+    //Subaary P&C
+    for (int i=0 ; i<n ; i++)
+    {
+        cout<<i+1<<" size Subaary = "<<n-i<<endl;
+    }
+  
+    return 0;
+}
