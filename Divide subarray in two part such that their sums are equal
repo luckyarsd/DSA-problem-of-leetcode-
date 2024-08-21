@@ -1,0 +1,35 @@
+// WAP to check that subarray can be divided in two part such that thier sums are equal.
+
+# include <iostream>
+using namespace std;
+int main()
+{
+    int arr[5] = {1,2,14,100,7};
+    int n = sizeof(arr)/4;
+    
+    int totalSum = 0 , prefix = 0;
+    bool ans = false;
+    for(int i=0 ; i<n ; i++)
+    {
+        totalSum += arr[i];
+    }
+    
+    for(int i=0 ; i<n-1 ; i++)
+    {
+        prefix += arr[i];
+        if(prefix== (totalSum/2))
+        {
+            ans = true;
+            break;
+        }
+    }
+    
+    if(ans==true)
+        cout<<"YES";
+    else
+        cout<<"NO";
+    
+    
+    
+    return 0;
+}
